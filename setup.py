@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="isostatic",
-    version="0.0.1dev",
+    version="0.0.1dev2",
     author="Rodrigo Jimenez",
     author_email="jimenezhuancarodrigo@gmail.com",
     description="A repository for designing isostatic structures",
@@ -18,7 +18,7 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
     ],
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
+    package_dir={"": "isostatic"},
+    packages=setuptools.find_packages(where="isostatic"),
     python_requires=">=3.6",
 )
