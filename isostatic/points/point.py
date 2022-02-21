@@ -1,19 +1,34 @@
 
 
 class Point:
-    def __init__(self, *args, typePoint = 'Point', rotate_degrees = 0, ) -> None:
-        self.args = [*args]
-        self.typePoint = typePoint
-        self.rotate_degrees = rotate_degrees #degrees
+    def __init__(self, name, *args) -> None:
+        if not isinstance(name, str):
+            raise TypeError('name tiene que ser string')
+        self.__args = [*args]
+        self.__name = name
 
     def __str__(self) -> str:
-        return (r'{}: {}'.format(self.typePoint, self.args))
+        return (r'{type}: {coord}'.format(type = 'Point',coord = self.__args))
 
     def __repr__(self) -> str:
-        return (r'{}: {}'.format(self.typePoint, self.args))
+        return (r'{type}: {coord}'.format(type = 'Point',coord = self.__args))
 
     def __len__(self) -> int:
-        return len(self.args)
+        return len(self.__args)
 
     def components(self):
         pass
+
+    @property
+    def name(self):
+        return self.__name
+    
+    @name.setter
+    def name(self, name):
+        if not isinstance(name, str):
+            raise (TypeError('name tiene que ser string'))
+        
+        self.__name = name
+
+    
+        
