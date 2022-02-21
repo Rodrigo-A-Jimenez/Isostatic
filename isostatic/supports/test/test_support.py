@@ -6,5 +6,5 @@ def test_istances():
     assert isinstance(RA, Support)
 
     '''
-    Errores en los tipos proporcionados
+    Errores en los tipos proporcionados(RESUELTO)
     '''
