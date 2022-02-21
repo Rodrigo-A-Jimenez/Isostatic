@@ -1,4 +1,3 @@
-from re import S
 from isostatic import Point
 from pytest import raises
 
@@ -32,7 +31,7 @@ def test_raises():
     with raises(TypeError):
         Point(5,3,1,2)
     with raises(TypeError):
-        Point(S,3,1,2)
+        Point(True,3,1,2)
     with raises(TypeError):
         Point(False,3,1,2)
 

@@ -1,6 +1,11 @@
 
 
 class Point:
+    '''
+    A point is a position of a place in the space.
+    But Isostatic only supports two-dimensions.
+
+    '''
     def __init__(self, name, *args) -> None:
         if not isinstance(name, str):
             raise TypeError('name tiene que ser string')
@@ -18,6 +23,10 @@ class Point:
 
     def components(self):
         pass
+
+    @property
+    def coordinates(self):
+        return self.__args
 
     @property
     def name(self):
