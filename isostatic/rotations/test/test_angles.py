@@ -24,3 +24,8 @@ def test_generalLoads_to_constantLoads():
     assert Q.angleLeft == R.angleLeft
     assert Q.angleRight == R.angleRight
     
+
+    A = LinealLoad(0,25,6)
+    B = GeneralLoadLineal(0, 25, 0, 6, 0)
+    assert A.angleLeft == B.angleLeft
+    assert A.angleRight == B.angleRight
