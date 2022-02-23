@@ -1,1 +1,1 @@
-from .angles import LinealLoad
+from .angles import LinealLoad, GeneralLoadLineal
