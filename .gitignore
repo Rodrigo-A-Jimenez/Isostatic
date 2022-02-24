@@ -3,3 +3,6 @@
 /isostatic/isostatic.egg-info
 
 /.pytest_cache
+
+/isostatic.egg-info
+/dist
