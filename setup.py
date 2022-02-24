@@ -1,11 +1,12 @@
 import setuptools
+from isostatic.release import __version__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="isostatic",
-    version="0.0.1",
+    version= __version__,
     author="Rodrigo Jimenez",
     author_email="jimenezhuancarodrigo@gmail.com",
     description="A repository for designing isostatic structures",
