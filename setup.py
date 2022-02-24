@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="isostatic",
-    version="0.0.1dev4",
+    version="0.0.1",
     author="Rodrigo Jimenez",
     author_email="jimenezhuancarodrigo@gmail.com",
     description="A repository for designing isostatic structures",
