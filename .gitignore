@@ -2,4 +2,9 @@
 **/__pycache__
 /isostatic/isostatic.egg-info
 
+.pypirc
+
 /.pytest_cache
+
+/isostatic.egg-info
+/dist
