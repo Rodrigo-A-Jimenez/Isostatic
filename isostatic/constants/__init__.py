@@ -1,0 +1,1 @@
+from constantsSymbols import E, Inertia

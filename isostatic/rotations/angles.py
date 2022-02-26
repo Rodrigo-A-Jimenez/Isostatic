@@ -1,7 +1,9 @@
-from sympy import Symbol
+from isostatic.constants.constantsSymbols import E, Inertia
 
-modE = Symbol('E')
-I_ = Symbol('I')
+modE = E
+I_ = Inertia
+
+
 
 class LinealLoad:
     def __init__(self, q1: float, q2: float, L: float, E = modE, I = I_) -> None:
