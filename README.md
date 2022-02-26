@@ -1,17 +1,26 @@
 # Isostatic
 A repository for designing isostatic structures
 
-# Es
+# Descripción
 Un repositorio para diseño de estructuras isostaticas mediante un paquete de python. 
 
 # Licencia
-Este repositorio no tiene licencia, si desea informacion por favor contactese al correo: jimenezhuancarodrigo@gmail.com para proporcionale una licencia personal a su persona
+Vea el archivo licencia en [github](https://github.com/Rodrigo-A-Jimenez/Isostatic)
 
 # Modulos
 - Point (2D)
 - Support (vertical, horizontal, momentos)
+- rotations (Solo casos de carga lineal)
 
 # Instalacion
-Todavia no disponible
+```python
+pip install isostatic
+```
+
+Una vez instalado importe los modulos
+
+```python
+from isostatic import Point, Support, LinealLoad, GeneralLoadLineal
+```
 
 
