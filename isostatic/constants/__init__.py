@@ -1,1 +1,1 @@
-from constantsSymbols import E, Inertia
+from .constantsSymbols import E, Inertia
