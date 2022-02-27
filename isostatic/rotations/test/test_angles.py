@@ -16,6 +16,7 @@ def test_linealLoads_angles():
     assert R.angleLeft == Rleft_angle
     assert R.angleRight == Rright_angle
 
+
 def test_generalLoads_to_constantLoads():
     Q = LinealLoad(100,100,10)
     R = GeneralLoadLineal(100, 100, 0, 10, 0)

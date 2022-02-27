@@ -36,6 +36,10 @@ class GeneralLoadLineal:
     importar las constantes modE y I_ para implementar distintos valores algebraicamente
     '''
     def __init__(self, q1: float, q2: float, a: float, b: float, c: float, E = modE, I = I_) -> None:
+        if b == 0:
+            raise ValueError(' "b" no debe ser cero ')
+
+
         self._L = a + b + c
         self._a = a
         self._b = b
@@ -58,3 +62,23 @@ class GeneralLoadLineal:
     @property
     def angleLeft(self):
         return self._angleLeft
+    
+
+class PuntualLoad():
+    def __init__(self, puntualLoad:float, a:float, b:float, E=modE, I = I_) -> None:
+        self._L = a + b
+        self._a = a
+        self._b = b
+        self._k = 1/(E*I)
+        self._P = puntualLoad
+
+        self._rightAngle = self._k * (self._P * self._a / (6 * self._L))*(self._b + self._L)
+        self._leftAngle = self._k * (self._P * self._a / (6 * self._L))*(self._a + self._L)
+
+    @property
+    def rightAngle(self):
+        return self._rightAngle
+    
+    @property
+    def leftAngle(self):
+        return self._leftAngle
