@@ -1,4 +1,3 @@
-from sympy import Li
 from isostatic import LinealLoad, GeneralLoadLineal
 from sympy.abc import E, I 
 
@@ -29,3 +28,17 @@ def test_generalLoads_to_constantLoads():
     B = GeneralLoadLineal(0, 25, 0, 6, 0)
     assert A.angleLeft == B.angleLeft
     assert A.angleRight == B.angleRight
+
+def test_loadTotal():
+    Q = GeneralLoadLineal(10,15,2,5,0)
+    Rq = (10+15)/2 * 5
+
+    Q1 = GeneralLoadLineal(0,100,10,3,10)
+    Rq1 = 100*3/2
+
+    Q2 = GeneralLoadLineal(25,25,0,7,0)
+    Rq2 = 25*7
+
+    assert Q.loadTotal() == Rq
+    assert Q1.loadTotal() == Rq1
+    assert Q2.loadTotal() == Rq2

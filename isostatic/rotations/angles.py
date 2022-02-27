@@ -48,6 +48,9 @@ class GeneralLoadLineal:
 
         self._angleLeft = self._k*((self._L**3)/360)*(self._q2*((10*((self._b*(3*self._a+2*self._b))/(self._L**2)))-(15*((self._a+self._b)/self._L)**4)+(3*((((self._a + self._b)**5)-self._a**5)/(self._b * self._L**4)))) + self._q1*((10*((self._b*(3*self._a + self._b))/(self._L**2)))+(15*(self._a/self._L)**4)-(3*((((self._a + self._b)**5)-self._a**5)/(self._b * self._L**4)))) )
 
+    def loadTotal(self):
+        return (((self._q1 + self._q2)/2)*self._b)
+
     @property
     def angleRight(self):
         return self._angleRight
