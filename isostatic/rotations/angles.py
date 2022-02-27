@@ -55,6 +55,3 @@ class GeneralLoadLineal:
     @property
     def angleLeft(self):
         return self._angleLeft
-
-        
-
