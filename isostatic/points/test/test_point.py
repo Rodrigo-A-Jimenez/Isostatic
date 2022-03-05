@@ -18,6 +18,10 @@ def test_str_point():
     D = Point('D',1, 5, 8, 7, 9)
     assert str(D) == str_D
 
+def test_modulus():
+    A = Point('A', 3, 4)
+    modA = 5
+    assert A.modulus() == modA
 
 
 def test_len_point():
@@ -48,3 +52,19 @@ def test_setters():
     B = Point('Z', 4, 5, 6)
     B.name = 'B'
     assert  B.name == 'B'
+
+def test_operations():
+    e1 = Point('e1', 5, -2)
+    e2 = Point('e2', 5, -2)
+    assert e1 == e2
+
+    A = Point('A',5,3)
+    B = Point('B',0,5)
+    AB = A + B
+    A_B = Point('AB', 5, 8)
+    assert AB == A_B
+
+    C = Point('C', 1, -2)
+    D = Point('D', 5, 2)
+    CD = Point('C-D', -4, -4)
+    assert (C-D) == CD
