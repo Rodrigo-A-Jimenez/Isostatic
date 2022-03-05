@@ -17,4 +17,6 @@ class Beam():
 
     def __repr__(self) -> str:
         return 'Beam: ' + self.__beamName
-
+    
+    def __str__(self) -> str:
+        return 'Beam: ' + self.__beamName
