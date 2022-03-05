@@ -11,6 +11,7 @@ class Point:
         self.__args = [*args]
         self.__name = name
         self.__stateSupport = False
+        self.__elements = []
 
 
     def __str__(self) -> str:
@@ -30,7 +31,12 @@ class Point:
         return __mod**0.5
 
     def addSupport(self):
+        if self.__stateSupport == True:
+            raise ValueError('{} ya tiene apoyo'.format(self.__name))
         self.__stateSupport = True
+    
+    def addElement(self, element):
+        self.__elements.append(element)
     
     @property
     def stateSupport(self):
@@ -43,6 +49,10 @@ class Point:
     @property
     def name(self):
         return self.__name
+
+    @property
+    def elements(self):
+        return self.__elements
     
     @name.setter
     def name(self, name):

@@ -23,6 +23,10 @@ def test_modulus():
     modA = 5
     assert A.modulus() == modA
 
+    B = Point('B',2,2,-1)
+    modB = 3
+    assert B.modulus() == modB
+
 
 def test_len_point():
     assert len(Point('A',4,8,2,3,-1,4,2))== 7
