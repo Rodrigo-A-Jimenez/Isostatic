@@ -11,16 +11,16 @@ class LinealLoad:
         self._q2 = q2
         self._L = L
         self._k = 1/(E*I)
-        self._angleRight = self._k * (((self._L**3)*(8*self._q1 + 7*self._q2))/(360))
-        self._angleLeft = self._k * (((self._L**3)*(7*self._q1 + 8*self._q2))/(360))
+        self.__rightAngle = self._k * (((self._L**3)*(8*self._q1 + 7*self._q2))/(360))
+        self.__leftAngle = self._k * (((self._L**3)*(7*self._q1 + 8*self._q2))/(360))
     
     @property
-    def angleRight(self):
-        return self._angleRight
+    def rightAngle(self):
+        return self.__rightAngle
     
     @property
-    def angleLeft(self):
-        return self._angleLeft
+    def leftAngle(self):
+        return self.__leftAngle
 
 class GeneralLoadLineal:
     '''
@@ -48,20 +48,20 @@ class GeneralLoadLineal:
         self._q2 = q2
         self._k = 1/(modE*I_)
 
-        self._angleRight = self._k*((self._L**3)/360)*(self._q1*((10*((self._b*(3*self._c+2*self._b))/(self._L**2)))-(15*((self._b+self._c)/self._L)**4)+(3*((((self._b + self._c)**5)-self._c**5)/(self._b * self._L**4)))) + self._q2*((10*((self._b*(3*self._c + self._b))/(self._L**2)))+(15*(self._c/self._L)**4)-(3*((((self._b + self._c)**5)-self._c**5)/(self._b * self._L**4)))) )
+        self.__rightAngle = self._k*((self._L**3)/360)*(self._q1*((10*((self._b*(3*self._c+2*self._b))/(self._L**2)))-(15*((self._b+self._c)/self._L)**4)+(3*((((self._b + self._c)**5)-self._c**5)/(self._b * self._L**4)))) + self._q2*((10*((self._b*(3*self._c + self._b))/(self._L**2)))+(15*(self._c/self._L)**4)-(3*((((self._b + self._c)**5)-self._c**5)/(self._b * self._L**4)))) )
 
-        self._angleLeft = self._k*((self._L**3)/360)*(self._q2*((10*((self._b*(3*self._a+2*self._b))/(self._L**2)))-(15*((self._a+self._b)/self._L)**4)+(3*((((self._a + self._b)**5)-self._a**5)/(self._b * self._L**4)))) + self._q1*((10*((self._b*(3*self._a + self._b))/(self._L**2)))+(15*(self._a/self._L)**4)-(3*((((self._a + self._b)**5)-self._a**5)/(self._b * self._L**4)))) )
+        self.__leftAngle = self._k*((self._L**3)/360)*(self._q2*((10*((self._b*(3*self._a+2*self._b))/(self._L**2)))-(15*((self._a+self._b)/self._L)**4)+(3*((((self._a + self._b)**5)-self._a**5)/(self._b * self._L**4)))) + self._q1*((10*((self._b*(3*self._a + self._b))/(self._L**2)))+(15*(self._a/self._L)**4)-(3*((((self._a + self._b)**5)-self._a**5)/(self._b * self._L**4)))) )
 
     def loadTotal(self):
         return (((self._q1 + self._q2)/2)*self._b)
 
     @property
-    def angleRight(self):
-        return self._angleRight
+    def rightAngle(self):
+        return self.__rightAngle
     
     @property
-    def angleLeft(self):
-        return self._angleLeft
+    def leftAngle(self):
+        return self.__leftAngle
     
 
 class PuntualLoad():

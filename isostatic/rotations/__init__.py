@@ -1,1 +1,1 @@
-from .angles import LinealLoad, GeneralLoadLineal
+from .angles import LinealLoad, GeneralLoadLineal, PuntualLoad
