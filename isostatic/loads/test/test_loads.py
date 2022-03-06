@@ -1,5 +1,11 @@
-from isostatic import LinealLoad, GeneralLoadLineal
-from sympy.abc import E, I 
+from isostatic import LinealLoad, GeneralLoadLineal, Beam
+from sympy.abc import E, I
+
+from isostatic.points.point import Point 
+
+testPoint_1 = Point('aux1', 0, 0)
+testPoint_2 = Point('aux2', 5, 0)
+beam = Beam(testPoint_1, testPoint_2)
 
 def test_linealLoads_angles():
     Q = LinealLoad(100,100,10)
@@ -18,26 +24,27 @@ def test_linealLoads_angles():
 
 
 def test_generalLoads_to_constantLoads():
+    
     Q = LinealLoad(100,100,10)
-    R = GeneralLoadLineal(100, 100, 0, 10, 0)
+    R = GeneralLoadLineal(beam, 100, 100, 0, 10, 0)
 
     assert Q.leftAngle == R.leftAngle
     assert Q.rightAngle == R.rightAngle
     
 
     A = LinealLoad(0,25,6)
-    B = GeneralLoadLineal(0, 25, 0, 6, 0)
+    B = GeneralLoadLineal(beam, 0, 25, 0, 6, 0)
     assert A.leftAngle == B.leftAngle
     assert A.rightAngle == B.rightAngle
 
 def test_loadTotal():
-    Q = GeneralLoadLineal(10,15,2,5,0)
+    Q = GeneralLoadLineal(beam,10,15,2,5,0)
     Rq = (10+15)/2 * 5
 
-    Q1 = GeneralLoadLineal(0,100,10,3,10)
+    Q1 = GeneralLoadLineal(beam,0,100,10,3,10)
     Rq1 = 100*3/2
 
-    Q2 = GeneralLoadLineal(25,25,0,7,0)
+    Q2 = GeneralLoadLineal(beam,25,25,0,7,0)
     Rq2 = 25*7
 
     assert Q.loadTotal() == Rq

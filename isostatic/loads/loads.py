@@ -35,10 +35,11 @@ class GeneralLoadLineal:
     OPCIONAL:
     importar las constantes modE y I_ para implementar distintos valores algebraicamente
     '''
-    def __init__(self, q1: float, q2: float, a: float, b: float, c: float, E = modE, I = I_) -> None:
+    def __init__(self, beam: object, q1: float, q2: float, a: float, b: float, c: float, E = modE, I = I_) -> None:
         if b == 0:
             raise ValueError(' "b" no debe ser cero ')
 
+        beam.addLoad(self)
 
         self._L = a + b + c
         self._a = a
