@@ -64,15 +64,16 @@ class GeneralLoadLineal:
     def leftAngle(self):
         return self.__leftAngle
     
-
 class PuntualLoad():
-    def __init__(self, puntualLoad:float, a:float, b:float, E=modE, I = I_) -> None:
+    def __init__(self, beam: object, puntualLoad:float, a:float, b:float, E=modE, I = I_) -> None:
         '''
         Classe que soporta la creacion de cargas puntuales
         puntualLoad: carga puntual aplicada
         a: distancia hacia el apoyo izquierdo de la carga puntual
         b: distancia hacia el apoyo derecho de la carga puntual
         '''
+        beam.addLoad(self)
+
         self._L = a + b
         self._a = a
         self._b = b
