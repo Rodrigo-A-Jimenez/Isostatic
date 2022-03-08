@@ -27,13 +27,11 @@ def test_modulus():
     modB = 3
     assert B.modulus() == modB
 
-
 def test_len_point():
     assert len(Point('A',4,8,2,3,-1,4,2))== 7
     assert len(Point('B',1,2,3)) == 3
     assert len(Point('C',100)) == 1
     assert len(Point('D')) == 0
-
 
 def test_raises():
     with raises(TypeError):
@@ -50,7 +48,6 @@ def test_raises():
 def test_getters():
     A = Point('A', 1, 2, 3)
     assert A.name == 'A'
-
 
 def test_setters():
     B = Point('Z', 4, 5, 6)
