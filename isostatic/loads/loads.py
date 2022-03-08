@@ -40,6 +40,7 @@ class GeneralLoadLineal:
             raise ValueError(' "b" no debe ser cero ')
 
         beam.addLoad(self)
+        self.__structure = beam.structure
 
         self._L = a + b + c
         self._a = a
@@ -55,6 +56,10 @@ class GeneralLoadLineal:
 
     def loadTotal(self):
         return (((self._q1 + self._q2)/2)*self._b)
+
+    @property
+    def structure(self) -> object:
+        return self.__structure
 
     @property
     def rightAngle(self):

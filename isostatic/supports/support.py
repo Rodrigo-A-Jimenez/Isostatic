@@ -18,6 +18,7 @@ class Support:
         pointImplementation.addSupport()
         self.__name = pointImplementation.name
         self.__vars = []
+        self.__structure = pointImplementation.structure
 
         if horizontal:
             self.__nameH = 'hor_{}'.format(self.__name)
@@ -39,6 +40,9 @@ class Support:
     def __str__(self) -> str:
         return 'Support {name}: {coord}'.format(name=self.__name, coord=self.__coord)
     
+    @property
+    def structure(self) -> object:
+        return self.__structure
 
     @property
     def vars(self):
