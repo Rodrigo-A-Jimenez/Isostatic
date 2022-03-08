@@ -1,1 +1,1 @@
-from .structure import ModelEstructure
+from .structure import Structure

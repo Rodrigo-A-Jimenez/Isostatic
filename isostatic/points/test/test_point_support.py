@@ -1,5 +1,5 @@
-from isostatic import Point, Support, ModelEstructure
-frame = ModelEstructure()
+from isostatic import Point, Support, Structure
+frame = Structure()
 
 def test_stateSupport():
     A = Point('A', 1, 2)
