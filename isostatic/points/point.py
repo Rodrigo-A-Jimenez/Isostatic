@@ -8,6 +8,9 @@ class Point:
     def __init__(self, name:str, *args, structure:object = None) -> None:
         if not isinstance(name, str):
             raise TypeError('name tiene que ser string')
+            
+        if not structure == None:
+            structure.addPoint(self)
         
         self.__structure = structure
         self.__args = [*args]

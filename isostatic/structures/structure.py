@@ -5,12 +5,15 @@ class ModelEstructure():
         self.__elements = []
         self.__points = []
         self.__loads = []
-        pass
+        self.__supports = []
 
-    def __addPoint(self, point):
+    def addPoint(self, point):
         self.__points.append(point)
+    
+    def addSupport(self, support):
+        self.__supports.append(support)
 
-    def __addLoads(self, load):
+    def addLoads(self, load):
         self.__loads.append(load)
 
     def addElement(self, element):

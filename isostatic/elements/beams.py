@@ -8,10 +8,12 @@ class Beam():
 
         if not (initialPoint.structure == endPoint.structure ):
             raise TypeError('Los puntos no pertencen a la misma estructura')
-
-        initialPoint.addElement(self) #Requiere test
-        endPoint.addElement(self) # requiere test
-
+        
+        if not initialPoint.structure == None:
+            initialPoint.structure.addElement()
+        
+        initialPoint.addElement(self) 
+        endPoint.addElement(self) 
 
         self.__beamName = str(initialPoint.name + endPoint.name)
 

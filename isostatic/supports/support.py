@@ -16,6 +16,9 @@ class Support:
             raise TypeError('Point necesariamente debe ser class Point')
         
         pointImplementation.addSupport()
+        if not pointImplementation.structure == None:
+            pointImplementation.structure.addSupport()
+        
         self.__name = pointImplementation.name
         self.__vars = []
         self.__structure = pointImplementation.structure

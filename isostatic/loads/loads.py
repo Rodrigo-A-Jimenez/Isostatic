@@ -40,7 +40,8 @@ class GeneralLoadLineal:
             raise ValueError(' "b" no debe ser cero ')
 
         beam.addLoad(self)
-        self.__structure = beam.structure
+        if not beam.structure == None:    
+            self.__structure = beam.structure
 
         self._L = a + b + c
         self._a = a
@@ -78,6 +79,8 @@ class PuntualLoad():
         b: distancia hacia el apoyo derecho de la carga puntual
         '''
         beam.addLoad(self)
+        if not beam.structure == None:
+            beam.structure.addLoad()
 
         self._L = a + b
         self._a = a
