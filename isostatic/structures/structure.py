@@ -1,6 +1,6 @@
 
 #Creacion de estructura en base a los elementos creados.
-class modelEstructure():
+class ModelEstructure():
     def __init__(self) -> None:
         self.__elements = []
         self.__points = []

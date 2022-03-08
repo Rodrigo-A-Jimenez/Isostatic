@@ -1,4 +1,4 @@
-from isostatic import Point
+from isostatic import Point, ModelEstructure
 from pytest import raises
 
 def test_str_point():

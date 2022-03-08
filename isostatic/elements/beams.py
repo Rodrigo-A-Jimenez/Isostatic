@@ -4,7 +4,7 @@ class Beam():
     '''
     Beam, es un elemento viga
     '''
-    def __init__(self,structure ,initialPoint: Point, endPoint: Point) -> None:
+    def __init__(self, initialPoint: Point, endPoint: Point) -> None:
 
         initialPoint.addElement(self) #Requiere test
         endPoint.addElement(self) # requiere test

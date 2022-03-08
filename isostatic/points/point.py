@@ -5,9 +5,11 @@ class Point:
     But Isostatic only supports two-dimensions.
     Use for build a structure
     '''
-    def __init__(self, name, *args) -> None:
+    def __init__(self, name:str, *args, structure:object = None) -> None:
         if not isinstance(name, str):
             raise TypeError('name tiene que ser string')
+        
+        self.__structure = structure
         self.__args = [*args]
         self.__name = name
         self.__stateSupport = False
@@ -38,6 +40,10 @@ class Point:
     def addElement(self, element):
         self.__elements.append(element)
     
+    @property
+    def structure(self) -> object:
+        return self.__structure
+
     @property
     def stateSupport(self):
         return self.__stateSupport
