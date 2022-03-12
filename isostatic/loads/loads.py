@@ -49,7 +49,7 @@ class GeneralLoadLineal:
         self._c = c
         self._q1 = q1
         self._q2 = q2
-        self._k = 1/(modE*I_)
+        self._k = 1/(E*I)
 
         self.__rightAngle = self._k*((self._L**3)/360)*(self._q1*((10*((self._b*(3*self._c+2*self._b))/(self._L**2)))-(15*((self._b+self._c)/self._L)**4)+(3*((((self._b + self._c)**5)-self._c**5)/(self._b * self._L**4)))) + self._q2*((10*((self._b*(3*self._c + self._b))/(self._L**2)))+(15*(self._c/self._L)**4)-(3*((((self._b + self._c)**5)-self._c**5)/(self._b * self._L**4)))) )
 

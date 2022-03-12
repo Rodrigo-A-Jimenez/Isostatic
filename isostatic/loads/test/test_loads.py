@@ -37,6 +37,12 @@ def test_generalLoads_to_constantLoads():
     assert A.leftAngle == B.leftAngle
     assert A.rightAngle == B.rightAngle
 
+def test_diferent_i_and_e():
+    Q = GeneralLoadLineal(beam, 10, 10, 0, 4, 0, E= 2*E)
+    wi = 26.6666666666666666667/(2*E*I)
+
+    assert Q.leftAngle == wi
+
 def test_loadTotal():
     Q = GeneralLoadLineal(beam,10,15,2,5,0)
     Rq = (10+15)/2 * 5
