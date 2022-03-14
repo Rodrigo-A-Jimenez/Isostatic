@@ -17,7 +17,7 @@ class Support:
         
         pointImplementation.addSupport()
         if not pointImplementation.structure == None:
-            pointImplementation.structure.addSupport()
+            pointImplementation.structure.addSupport(self)
         
         self.__name = pointImplementation.name
         self.__vars = []

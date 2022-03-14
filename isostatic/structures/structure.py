@@ -18,6 +18,22 @@ class Structure():
 
     def addElement(self, element):
         self.__elements.append(element)
+
+    @property
+    def elements(self):
+        return self.__elements
+    
+    @property
+    def points(self):
+        return self.__points
+    
+    @property
+    def loads(self):
+        return self.__loads
+
+    @property
+    def supports(self):
+        return self.__supports
         
 
 
