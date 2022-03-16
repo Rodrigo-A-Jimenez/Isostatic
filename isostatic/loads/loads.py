@@ -41,7 +41,7 @@ class GeneralLoadLineal:
 
         beam.addLoad(self)
         if not beam.structure == None:    
-            self.__structure = beam.structure
+            self.__structure = beam.structure.addLoad(self)
 
         self._L = a + b + c
         self._a = a

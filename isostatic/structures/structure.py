@@ -13,7 +13,7 @@ class Structure():
     def addSupport(self, support):
         self.__supports.append(support)
 
-    def addLoads(self, load):
+    def addLoad(self, load):
         self.__loads.append(load)
 
     def addElement(self, element):

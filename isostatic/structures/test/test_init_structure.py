@@ -20,5 +20,5 @@ def test_lists():
     assert Structure1.elements == [AB, BC]
     assert Structure1.points == [A, B, C]
     assert Structure1.supports == [Ra, Rc]
-    assert Structure1.loads == [q1, q2] #test failed
+    assert Structure1.loads == [q1, q2] 
 
