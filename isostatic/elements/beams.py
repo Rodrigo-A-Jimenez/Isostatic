@@ -37,6 +37,18 @@ class Beam():
     @property
     def loads(self):
         return self.__loads
+    
+    @property
+    def initialPoint(self):
+        return self.__initialPoint
+    
+    @property
+    def endPoint(self):
+        return self.__endPoint
+    
+    @property
+    def modulusVector(self):
+        return self.__modulusVector
 
     def __repr__(self) -> str:
         return 'Beam: ' + self.__beamName

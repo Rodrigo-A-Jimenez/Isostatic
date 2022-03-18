@@ -69,3 +69,12 @@ def test_operations():
     D = Point('D', 5, 2)
     CD = Point('C-D', -4, -4)
     assert (C-D) == CD
+    
+    E = Point('E', 2, -2)
+    n = 2.0
+    m = 5
+    E_div1 = Point('E/', 1, -1)
+    E_div2 = Point('E/', 2/5, -2/5)
+    
+    assert (E/n) == E_div1
+    assert (E/m) == E_div2

@@ -88,6 +88,15 @@ class Point:
         for i, j in zip(self.coordinates, __other.coordinates):
             __substraction.append(i-j)
         return Point(str(self.name + '-' + __other.name), *__substraction)
+    
+    def __truediv__(self, __other: float):
+        __division = []
+        if not (isinstance(__other, int) or isinstance(__other, float)):
+            raise TypeError('Dividen mus be a number, integer or float')
+        for i in self.coordinates:
+            __division.append(i/__other)
+        return Point(str(self.name + '/'), *__division)
+        
 
 A = Point('A', 1, 2, 3)
 A.coordinates
