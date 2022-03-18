@@ -1,8 +1,8 @@
-from isostatic import X, Y, Z, Beam
+from isostatic import X, Y, Z
 
 
 class CoordinateSystem():
-    def __init__(self, element: Beam)-> None:
+    def __init__(self, element: object)-> None:
         self.__X = X
         self.__Y = Y
         self.__Z = Z
