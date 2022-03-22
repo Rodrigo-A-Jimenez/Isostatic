@@ -32,3 +32,6 @@ class CoordinateSystem():
     @property
     def z(self):
         return self.__Z
+    
+    def interval(self ,begin, ending):
+        return [begin*self.__X , ending*self.__Y]
