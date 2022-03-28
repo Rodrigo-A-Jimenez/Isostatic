@@ -30,3 +30,14 @@ def test_vector_add():
     u2 = Vector(4, 11)
     u3 = u1 + u2
     assert u3.notation == [0, -21]
+
+def test_vector_sub():
+    v1 = Vector(2, [-4, -3])
+    v2 = Vector(6, [1, 2])
+    v3 = v1 - v2
+    assert v3.notation == [-5, -5]
+    
+    u1 = Vector(5, 10)
+    u2 = Vector(4, 11)
+    u3 = u1 - u2
+    assert u3.notation == [0, 1]
